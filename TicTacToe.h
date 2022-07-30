@@ -56,7 +56,7 @@ void TicTacToe()
     }
 }
 
-// This fucntion reassigns the grid to int values if the user wants
+// This function reassigns the grid to int values if the user wants
 // to play Tic Tac Toe again otherwise the game will show previous results.
 void reassign(){            
     char c = '1';
