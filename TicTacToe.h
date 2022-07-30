@@ -13,7 +13,7 @@ int checkForWin(int);
 
 // Global variables
 char grid[10];      
-// Notes that '0' remains unused throughout the
+// Note that index '0' remains unused throughout the
 // program for the sake of simplicity.
 
 const char player1 = 'X';
