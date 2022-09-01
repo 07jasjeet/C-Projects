@@ -13,7 +13,7 @@ int checkForWin(int);
 
 // Global variables
 char grid[10];      
-// Notes that '0' remains unused throughout the
+// Note that index '0' remains unused throughout the
 // program for the sake of simplicity.
 
 const char player1 = 'X';
@@ -56,7 +56,7 @@ void TicTacToe()
     }
 }
 
-// This fucntion reassigns the grid to int values if the user wants
+// This function reassigns the grid to int values if the user wants
 // to play Tic Tac Toe again otherwise the game will show previous results.
 void reassign(){            
     char c = '1';
@@ -122,36 +122,7 @@ void takeValue(int i)
 int checkForWin(int i)
 {
     int returnValue = 0;
-    /* 
-    if (grid[1]==grid[2] && grid[2]==grid[3])           
-    // Horizontal Win
-        returnValue = 1;
-    else if (grid[4]==grid[5] && grid[5]==grid[6])      
-    // Horizontal Win
-        returnValue = 1;
-    else if (grid[7]==grid[8] && grid[8]==grid[9])      
-    // Horizontal Win
-        returnValue = 1;
-    else if (grid[1]==grid[4] && grid[4]==grid[7])      
-    // Vertical Win
-        returnValue = 1;
-    else if (grid[2]==grid[5] && grid[5]==grid[8])      
-    // Vertical Win
-        returnValue = 1;
-    else if (grid[3]==grid[6] && grid[6]==grid[9])      
-    // Vertical Win
-        returnValue = 1;
-    else if (grid[1]==grid[5] && grid[5]==grid[9])      
-    // Diagonal Win
-        returnValue = 1;
-    else if (grid[3]==grid[5] && grid[5]==grid[7])      
-    // Diagonal Win
-        returnValue = 1;
-    else if (i==8){
-    // Draw condition
-        returnValue = -1;
-    } 
-    */
+    
     if (   // Horizonatal Wins
            grid[1]==grid[2] && grid[2]==grid[3]   
         || grid[4]==grid[5] && grid[5]==grid[6] 
@@ -165,9 +136,8 @@ int checkForWin(int i)
         || grid[3]==grid[5] && grid[5]==grid[7]  
         )           
         returnValue = 1;
-    else if (i==8){
-        returnValue = -1;
-    }
+    else if (i==8)
+        returnValue = -1; 
     
     return (returnValue);
 }
